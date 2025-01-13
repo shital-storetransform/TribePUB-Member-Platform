@@ -1,5 +1,4 @@
 import React from 'react';
-import Placeholder from '../placeholder.png';
 import Platform from '../Assets/A-Platform-Unified-Business 2.png';
 import Dashboard from '../Assets/img-2 1.png';
 

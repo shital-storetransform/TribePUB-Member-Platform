@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react/static/css/main.d4091059.css",
+    "main.js": "/react/static/js/main.f45d3467.js",
+    "static/js/488.73e9266d.chunk.js": "/react/static/js/488.73e9266d.chunk.js",
+    "static/media/Frame 1(1).png": "/react/static/media/Frame 1(1).02b8e16d27519bec5eb3.png",
+    "static/media/Mask group (2).png": "/react/static/media/Mask group (2).0c3d29b6a5d3f19e6088.png",
+    "static/media/youtube.jpeg": "/react/static/media/youtube.ac136cf6e93757dde4e9.jpeg",
+    "static/media/person.jpg": "/react/static/media/person.a228fa6a28a9d809baa5.jpg",
+    "static/media/image 4.png": "/react/static/media/image 4.d31847668459c513eef5.png",
+    "index.html": "/react/index.html",
+    "main.d4091059.css.map": "/react/static/css/main.d4091059.css.map",
+    "main.f45d3467.js.map": "/react/static/js/main.f45d3467.js.map",
+    "488.73e9266d.chunk.js.map": "/react/static/js/488.73e9266d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4091059.css",
+    "static/js/main.f45d3467.js"
+  ]
+}

@@ -1,9 +1,39 @@
-import Placeholder from "../placeholder.png"
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Tribepub from "../Assets/image 1.png"
 import { Facebook, Youtube, Instagram, Twitter } from 'lucide-react';
+import Tribepub from "../Assets/image 1.png";
 
 export default function Footer() {
+  const [footerMenuItems, setFooterMenuItems] = useState([]); // State for footer menu items
+  const [footerAboutMenuItems, setFooterAboutMenuItems] = useState([]); // State for "Footer About" menu items
+  const [loading, setLoading] = useState(true); // State to handle loading
+
+  useEffect(() => {
+    // Fetch the "Footer" menu data from the correct WordPress API endpoint for Quick Links
+    fetch('https://tribepub.storeredesign.com/wp-json/custom/v1/footer-menu')
+      .then((response) => response.json())
+      .then((data) => {
+        setFooterMenuItems(data || []); // Populate menu items or set empty array if undefined
+        setLoading(false); // Stop loading
+      })
+      .catch((error) => {
+        console.error('Error fetching footer menu:', error);
+        setFooterMenuItems([]); // Handle errors gracefully
+        setLoading(false);
+      });
+
+    // Fetch the "Footer About" menu data for About section
+    fetch('https://tribepub.storeredesign.com/wp-json/custom/v1/footer-about-menu')
+      .then((response) => response.json())
+      .then((data) => {
+        setFooterAboutMenuItems(data || []); // Populate menu items or set empty array if undefined
+      })
+      .catch((error) => {
+        console.error('Error fetching footer about menu:', error);
+        setFooterAboutMenuItems([]); // Handle errors gracefully
+      });
+  }, []);
+
   return (
     <footer className="bg-black text-white">
       <div className="max-w-[1170px] mx-auto px-4 py-12">
@@ -36,6 +66,26 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Quick Links Section (using Footer menu) */}
+          <div>
+            <h3 className="text-amber-500 font-semibold text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {loading ? (
+                <li>Loading menu...</li>
+              ) : footerMenuItems.length > 0 ? (
+                footerMenuItems.map((item) => (
+                  <li key={item.id}>
+                    <a href={item.url} className="text-gray-400 hover:text-white">
+                      {item.title}
+                    </a>
+                  </li>
+                ))
+              ) : (
+                <li>No menu items found</li>
+              )}
+            </ul>
+          </div>
+
           {/* Community Section */}
           <div>
             <h3 className="text-amber-500 font-semibold text-lg mb-4">Community</h3>
@@ -50,47 +100,21 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* About Section */}
+          {/* About Section (using Footer About menu) */}
           <div>
             <h3 className="text-amber-500 font-semibold text-lg mb-4">About</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">About</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Team</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Upwork</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">LinkedIn</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Kyle Newton</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Links Section */}
-          <div>
-            <h3 className="text-amber-500 font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Home</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Tech Stack</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Client & Studies</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Results</Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-white">Packages</Link>
-              </li>
+              {footerAboutMenuItems.length > 0 ? (
+                footerAboutMenuItems.map((item) => (
+                  <li key={item.id}>
+                    <a href={item.url} className="text-gray-400 hover:text-white">
+                      {item.title}
+                    </a>
+                  </li>
+                ))
+              ) : (
+                <li>No menu items found</li>
+              )}
             </ul>
           </div>
         </div>

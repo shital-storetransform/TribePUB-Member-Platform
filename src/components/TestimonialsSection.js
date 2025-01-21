@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, Pause, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import Youtube from "../youtube.jpeg"
+import Frame from "../Assets/Frame 1(1).png"
 
 const testimonials = [
   {
@@ -14,21 +15,21 @@ const testimonials = [
     id: 2,
     name: "Elaine lkajdh",
     title: "Founder of Art xyz comms",
-    thumbnail: 'Frame 1(1).png',
+    thumbnail: `${Frame}`,
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ea provident soluta sed Quis omnis aut ipsa sunt est repudiandae voluptatibus. In sapiente voluptatem aut Quis repellendus vel consequuntur rerum non architecto architecto et dignissimos mollitia est molestiae dolor. Aut aspernatur dolor a officiis voluptatem sed neque reprehenderit qui quaerat debitis ut impedit voluptatem?"
   },
   {
     id: 3,
     name: "Elaine Snadasyder",
     title: "Founder of Art xyz comms",
-    thumbnail: 'Frame 1(1).png',
+    thumbnail: `${Frame}`,
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ea provident soluta sed Quis omnis aut ipsa sunt est repudiandae voluptatibus. In sapiente voluptatem aut Quis repellendus vel consequuntur rerum non architecto architecto et dignissimos mollitia est molestiae dolor. Aut aspernatur dolor a officiis voluptatem sed neque reprehenderit qui quaerat debitis ut impedit voluptatem?"
   },
   {
   id: 4,  // New Testimonial
     name: "Elaine Snadasyder",
     title: "Founder of Art xyz comms",
-    thumbnail: 'Frame 1(1).png',
+    thumbnail: `${Frame}`,
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Ea provident soluta sed Quis omnis aut ipsa sunt est repudiandae voluptatibus. In sapiente voluptatem aut Quis repellendus vel consequuntur rerum non architecto architecto et dignissimos mollitia est molestiae dolor. Aut aspernatur dolor a officiis voluptatem sed neque reprehenderit qui quaerat debitis ut impedit voluptatem?"
   }
   

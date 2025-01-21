@@ -1,14 +1,21 @@
 import React from 'react';
+import Image2 from '../Assets/image 2.png'
+import Image3 from '../Assets/image 3.png'
+import Image4 from '../Assets/image 4.png'
+import Image5 from '../Assets/image 5.png'
+import Image6 from '../Assets/image 6.png'
+import Image7 from '../Assets/image 7.png'
+import Image8 from '../Assets/image 8.png'
 
 export default function PartnersSection() {
   const partners = [
-    { name: "BuddyBoss", image: "image 2.png" },
-    { name: "Tutor LMS", image: "image 3.png" },
-    { name: "Elementor", image: "image 4.png" },
-    { name: "LearnDash", image: "image 5.png" },
-    { name: "WooCommerce", image: "image 6.png" },
-    { name: "Divi", image: "image 7.png" },
-    { name: "Spectra", image: "image 8.png" },
+    { name: "BuddyBoss", image: Image2 },
+    { name: "Tutor LMS", image: Image3 },
+    { name: "Elementor", image: Image4 },
+    { name: "LearnDash", image: Image5 },
+    { name: "WooCommerce",image: Image6 },
+    { name: "Divi", image: Image7 },
+    { name: "Spectra", image: Image8 },
   ];
 
   return (

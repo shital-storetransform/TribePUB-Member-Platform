@@ -36,8 +36,8 @@ function App() {
         <ScheduleConsultation />
         <TestimonialsSection />
         <BlogSection />
-        <CreatePost /> {/* New component for creating posts */}
-        <PostsList /> {/* New component for displaying posts */}
+        {/* <CreatePost /> {/* New component for creating posts */}
+        {/* <PostsList /> New component for displaying posts  */}
         <ContactForm />
         <Footer />
       </div>
